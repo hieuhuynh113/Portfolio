@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="white" />
+  <rect width="232" height="232" rx="36" x="12" y="12" fill="url(#gradient)" />
+  <path d="M70 60V196H90V140H166V196H186V60H166V120H90V60H70Z" fill="white" />
+  <style>
+    @media (prefers-color-scheme: dark) {
+      rect:first-child {
+        fill: #111827;
+      }
+    }
+  </style>
+</svg> 
