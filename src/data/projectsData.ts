@@ -18,7 +18,7 @@ export const projects: Project[] = [
     challenges: "Thách thức chính trong việc xây dựng portfolio là tạo ra một thiết kế độc đáo thu hút sự chú ý nhưng vẫn đảm bảo tính chuyên nghiệp. Việc tối ưu hóa hiệu suất trang web, đảm bảo khả năng tương thích trên nhiều thiết bị, và triển khai các hiệu ứng mượt mà không làm ảnh hưởng đến trải nghiệm người dùng là những vấn đề quan trọng cần giải quyết.",
     solutions: "Tôi đã sử dụng Tailwind CSS để xây dựng giao diện linh hoạt và dễ bảo trì, kết hợp với TypeScript để tăng cường tính mạnh mẽ của code. Các hooks của React được sử dụng để quản lý trạng thái và hiệu ứng, trong khi Intersection Observer API giúp tạo các hiệu ứng cuộn trang mượt mà. Chế độ giao diện sáng/tối được triển khai để tăng cường trải nghiệm người dùng và khả năng tiếp cận.",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design", "Dark Mode"],
-    image: "/public/portfolio_avatar_project.jpg",
+    image: "/portfolio_avatar_project.jpg",
     githubUrl: "https://github.com/hieuhuynh113/Portfolio",
     liveUrl: "https://portfolio.ntu271.vpsttt.vn/"
   },
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     challenges: "Việc xây dựng một hệ thống thông báo thời gian thực mượt mà và quản lý hiệu quả luồng dữ liệu phức tạp giữa người dùng là những thách thức lớn. Hơn nữa, cần thiết kế một hệ thống có khả năng mở rộng để đáp ứng số lượng người dùng tăng trưởng.",
     solutions: "Tôi đã sử dụng Socket.io cho các kết nối thời gian thực và thiết kế một kiến trúc microservice để tăng khả năng mở rộng. MongoDB được chọn vì khả năng lưu trữ dữ liệu linh hoạt, và tôi đã tối ưu hóa truy vấn để cải thiện hiệu suất.",
     technologies: ["Laravel", "PHP", "MySQL", "XAMPP"],
-    image: "/public/project_2.png",
+    image: "/project_2.png",
     githubUrl: "https://github.com/hieuhuynh113/BarberShop",
     liveUrl: "https://ntu271.vpsttt.vn/"
   },
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     challenges: "Dự án Japanese Language Center đối mặt với nhiều thách thức kỹ thuật, bao gồm việc quản lý nhiều giao diện phức tạp với nhiều thành phần tương tác như khóa học, tin tức, và thông tin du học. Hệ thống phải hỗ trợ đa ngôn ngữ, xử lý đa dạng định dạng nội dung, và tối ưu hóa hiệu suất khi tải dữ liệu phong phú. Thêm vào đó, dự án cần đảm bảo khả năng tương thích với nhiều thiết bị và trình duyệt, đồng thời giải quyết các vấn đề phụ thuộc thư viện xung đột như TypeScript và i18next.",
     solutions: "Để giải quyết các thách thức trên, tôi đã sử dụng React với TypeScript làm nền tảng chính, kết hợp với Material UI để tạo giao diện nhất quán và đáp ứng. Hệ thống i18next được triển khai cho việc quốc tế hóa nội dung, cho phép chuyển đổi giữa các ngôn ngữ một cách liền mạch. Cấu trúc dự án được tổ chức theo mô hình thành phần, cho phép tái sử dụng và bảo trì dễ dàng. Vấn đề xung đột phụ thuộc được giải quyết bằng cách sử dụng cờ --legacy-peer-deps để đảm bảo tính tương thích, trong khi hiệu suất được tối ưu hóa thông qua tải nội dung theo yêu cầu và kỹ thuật phân chia mã.",
     technologies: ["React", "TypeScript", "JavaScript", "Material UI"],
-    image: "/public/project_3.png",
+    image: "/project_3.png",
     githubUrl: "https://github.com/hieuhuynh113/Japanese-Language-Center.git",
     liveUrl: "https://example.com/task-manager"
   },
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     challenges: "Dự án đối mặt với việc tạo trải nghiệm xem thực đơn trực quan mà không gây quá tải thông tin, thiết kế hệ thống đặt bàn vừa đơn giản vừa đầy đủ chức năng, tối ưu hiệu suất với nhiều hình ảnh chất lượng cao, và đảm bảo thiết kế responsive hoạt động tốt trên mọi thiết bị.",
     solutions: "Tôi đã triển khai giao diện lọc đa chiều với modal chi tiết món ăn, form đặt bàn trực quan với validation thời gian thực, áp dụng lazy loading và skeleton loading để cải thiện hiệu suất, đồng thời sử dụng Tailwind CSS để xây dựng giao diện responsive chất lượng cao. Kiến trúc component-based của React giúp code dễ bảo trì và mở rộng.",
     technologies: ["React", "TypeScript", "Tailwind CSS ", "Vite"],
-    image: "/public/project_4.png",
+    image: "/project_4.png",
     githubUrl: "https://github.com/hieuhuynh113/landing-page-restaurant",
     liveUrl: "https://example.com/weather-app"
   },

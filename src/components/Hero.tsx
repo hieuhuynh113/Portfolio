@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowDown, Github, Mail, FileText } from 'lucide-react';
-import avatarImage from '/public/avatar.png';
+import avatarImage from '../assets/avatar.png';
 
 interface HeroProps {
   onSetActive: () => void;
@@ -91,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ onSetActive }) => {
           </a>
           <a 
             href="/HuynhTrungHieu_CV.pdf" 
-            download="HuynhTrungHieu_CV.pdf"
+            download
             className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
             aria-label="CV"
           >
