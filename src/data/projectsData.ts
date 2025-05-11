@@ -42,7 +42,7 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "JavaScript", "Material UI"],
     image: "project_3.png",
     githubUrl: "https://github.com/hieuhuynh113/Japanese-Language-Center.git",
-    liveUrl: "https://example.com/task-manager"
+    liveUrl: "https://japanese.ntu271.vpsttt.vn/"
   },
   {
     title: "Landing page nhà hàng",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Tailwind CSS ", "Vite"],
     image: "project_4.png",
     githubUrl: "https://github.com/hieuhuynh113/landing-page-restaurant",
-    liveUrl: "https://example.com/weather-app"
+    liveUrl: "https://landingpage.ntu271.vpsttt.vn/"
   },
   {
     title: "Recipe Sharing Platform",
