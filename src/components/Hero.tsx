@@ -90,7 +90,7 @@ const Hero: React.FC<HeroProps> = ({ onSetActive }) => {
             <Mail className="h-6 w-6" />
           </a>
           <a 
-            href="/HuynhTrungHieu_CV.pdf" 
+            href="HuynhTrungHieu_CV.pdf" 
             download
             className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
             aria-label="CV"
