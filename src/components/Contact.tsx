@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import AnimateOnScroll from './AnimateOnScroll';
 
 interface ContactProps {
   onSetActive: () => void;
@@ -75,53 +76,57 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
     {
       icon: <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
       title: 'Địa chỉ',
-      details: 'Hà Nội, Việt Nam',
+      details: 'Đường quốc lộ 1A, Diên Toàn, Diên Khánh, Khánh Hòa',
     },
     {
       icon: <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
       title: 'Điện thoại',
-      details: '+84 123 456 789',
+      details: '+84 559764554',
     },
     {
       icon: <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
       title: 'Email',
-      details: 'nguyenvana@example.com',
+      details: 'trunghieuhuynh520@gmail.com',
     },
   ];
 
   return (
     <div
       ref={sectionRef}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Liên hệ</h2>
-          <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
-          <p className="mt-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            Hãy liên hệ với tôi nếu bạn có bất kỳ câu hỏi hoặc cơ hội hợp tác nào. Tôi sẽ phản hồi trong thời gian sớm nhất.
-          </p>
-        </div>
+        <AnimateOnScroll>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Liên hệ</h2>
+            <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
+            <p className="mt-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+              Hãy liên hệ với tôi nếu bạn có bất kỳ câu hỏi hoặc cơ hội hợp tác nào. Tôi sẽ phản hồi trong thời gian sớm nhất.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="lg:col-span-1 space-y-8">
-            {contactInfo.map((info, index) => (
-              <div
-                key={index}
-                className="flex items-start p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md"
-              >
-                <div className="mr-4 mt-1">{info.icon}</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                    {info.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">{info.details}</p>
+          <AnimateOnScroll animation="fade-right" className="lg:col-span-1">
+            <div className="space-y-8">
+              {contactInfo.map((info, index) => (
+                <div
+                  key={index}
+                  className="flex items-start p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md"
+                >
+                  <div className="mr-4 mt-1">{info.icon}</div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                      {info.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">{info.details}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
 
-          <div className="lg:col-span-2">
+          <AnimateOnScroll animation="fade-left" delay={200} className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
               {formStatus.message && (
                 <div
@@ -217,7 +222,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                 Gửi tin nhắn
               </button>
             </form>
-          </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold text-white mb-2">DevPortfolio</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Huỳnh Trung Hiếu</h3>
             <p className="text-gray-400 max-w-md">
               Web developer với đam mê tạo ra các trải nghiệm web ấn tượng và giải pháp toàn diện.
             </p>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center border-t border-gray-800 pt-8">
           <div className="flex space-x-6 mb-6">
             <a
-              href="https://github.com"
+              href="https://github.com/hieuhuynh113"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:email@example.com"
+              href="mailto:trunghieuhuynh520@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
               aria-label="Email"
             >
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
           </div>
 
           <p className="text-gray-500 text-center flex items-center">
-            &copy; {currentYear} DevPortfolio. Tạo với{' '}
+            &copy; {currentYear} Huỳnh Trung Hiếu. Tạo với{' '}
             <Heart className="h-4 w-4 text-red-500 mx-1 inline" /> bằng React & Tailwind CSS.
           </p>
         </div>
