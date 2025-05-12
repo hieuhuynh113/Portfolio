@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowDown, Github, Mail, FileText } from 'lucide-react';
+import { ArrowDown, Github, Mail, Linkedin } from 'lucide-react';
 import avatarImage from '../assets/avatar.png';
 
 interface HeroProps {
@@ -82,6 +82,17 @@ const Hero: React.FC<HeroProps> = ({ onSetActive }) => {
           >
             <Github className="h-6 w-6" />
           </a>
+
+          <a 
+            href="https://www.linkedin.com/in/huỳnh-trung-hiếu-a530b7365" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-6 w-6" />
+          </a>
+          
           <a 
             href="mailto:trunghieuhuynh520@gmail.com" 
             className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
@@ -89,14 +100,7 @@ const Hero: React.FC<HeroProps> = ({ onSetActive }) => {
           >
             <Mail className="h-6 w-6" />
           </a>
-          <a 
-            href="HuynhTrungHieu_CV.pdf" 
-            download
-            className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-            aria-label="CV"
-          >
-            <FileText className="h-6 w-6" />
-          </a>
+          
         </div>
         
         <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 animate-bounce">
