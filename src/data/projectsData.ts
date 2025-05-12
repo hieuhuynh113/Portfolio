@@ -17,7 +17,7 @@ export const projects: Project[] = [
     category: "Web",
     image: "portfolio_avatar_project.jpg",
     githubUrl: "https://github.com/hieuhuynh113/Portfolio",
-    liveUrl: "https://portfolio.ntu271.vpsttt.vn/"
+    liveUrl: "https://portfolio-seven-psi-33.vercel.app/"
   },
   {
     title: "WEBSITE BARBER SHOP",
