@@ -25,7 +25,7 @@ export const projects: Project[] = [
     technologies: ["Laravel", "PHP", "MySQL", "XAMPP"],
     category: "Web",
     image: "project_2.png",
-    githubUrl: "https://github.com/hieuhuynh113/BarberShop",
+    githubUrl: "https://github.com/hieuhuynh113/laravel_barber_app",
     liveUrl: "https://ntu271.vpsttt.vn/"
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "JavaScript", "Material UI"],
     category: "Web",
     image: "project_3.png",
-    githubUrl: "https://github.com/hieuhuynh113/Japanese-Language-Center.git",
+    githubUrl: "https://github.com/hieuhuynh113/Japanese-Language-Center",
     liveUrl: "https://japanese.ntu271.vpsttt.vn/"
   },
   {

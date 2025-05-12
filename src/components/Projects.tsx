@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { projects } from '../data/projectsData';
 import AnimateOnScroll from './AnimateOnScroll';
 
@@ -22,13 +22,15 @@ const Projects: React.FC<ProjectsProps> = ({ onSetActive }) => {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [onSetActive]);
@@ -57,45 +59,73 @@ const Projects: React.FC<ProjectsProps> = ({ onSetActive }) => {
                 href={project.liveUrl || project.githubUrl || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 group h-[320px] hover:shadow-xl transition-all duration-300"
+                className="block relative overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 group h-[320px] hover:shadow-xl transition-all duration-500 hover:scale-[0.94] hover:border-blue-500/50"
               >
                 {/* Hình ảnh nền với độ mờ cao hơn */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-75"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70"
                 />
                 
                 {/* Overlay và thông tin - căn giữa */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/30 opacity-90 flex flex-col justify-end p-6 transition-all duration-300 group-hover:bg-blue-900/90">
-                  <div className="flex items-center mb-2">
-                    <h3 className="text-xs font-bold text-white drop-shadow-md">
+                <div 
+                  className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-500
+                  bg-gradient-to-t from-black/90 via-black/70 to-black/40
+                  group-hover:from-blue-700/95 group-hover:via-blue-800/85 group-hover:to-blue-900/75"
+                >
+                  <div className="flex items-center mb-2 transform transition-transform duration-500 group-hover:translate-y-[-4px]">
+                    <h3 className="text-base md:text-lg font-bold text-white drop-shadow-md">
                       {project.title}
                     </h3>
-                    {(project.liveUrl || project.githubUrl) && (
-                      <ExternalLink className="h-3 w-3 text-white ml-2 opacity-75 hover:opacity-100" />
+                    {project.liveUrl && (
+                      <a 
+                        href={project.liveUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="ml-2 text-white hover:text-blue-300 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label="Live demo"
+                      >
+                        <ExternalLink className="h-4 w-4 md:h-5 md:w-5 opacity-75 hover:opacity-100" />
+                      </a>
                     )}
                   </div>
                   
-                  <p className="text-[17.6px] text-white mb-4 line-clamp-2 max-w-md drop-shadow">
+                  <p className="text-[17.6px] text-white mb-4 line-clamp-2 max-w-md drop-shadow transform transition-all duration-500 group-hover:translate-y-[-4px]">
                     {project.shortDescription}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 transform transition-all duration-500 group-hover:translate-y-[-4px]">
                     {project.technologies.slice(0, 4).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-blue-600/60 text-white text-xs rounded-md shadow-sm"
+                        className="px-2 py-1 bg-blue-600/60 text-white text-xs rounded-md shadow-sm group-hover:bg-blue-500/80 transition-all"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="px-2 py-1 bg-blue-600/60 text-white text-xs rounded-md shadow-sm">
+                      <span className="px-2 py-1 bg-blue-600/60 text-white text-xs rounded-md shadow-sm group-hover:bg-blue-500/80 transition-all">
                         +{project.technologies.length - 4}
                       </span>
                     )}
                   </div>
+                  
+                  {project.githubUrl && (
+                    <div className="mt-4 transform transition-all duration-500 group-hover:translate-y-[-4px]">
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-xs text-white bg-gray-800/70 hover:bg-gray-700/90 px-3 py-1.5 rounded-md transition-colors group-hover:shadow-md hover:shadow-lg"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Github className="h-3.5 w-3.5 mr-1.5" />
+                        Xem mã nguồn
+                      </a>
+                    </div>
+                  )}
                 </div>
               </a>
             </AnimateOnScroll>
