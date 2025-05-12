@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ onSetActive }) => {
     {
       icon: <Code2 className="h-8 w-8 text-blue-600 dark:text-blue-400" />,
       title: 'Phát triển web',
-      description: 'Chuyên về xây dựng ứng dụng web hiện đại với React, TypeScript và các công nghệ mới nhất.',
+      description: 'Chuyên về xây dựng ứng dụng web hiện đại với React, JavaScript và các công nghệ mới nhất.',
     },
     {
       icon: <BookOpen className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />,
