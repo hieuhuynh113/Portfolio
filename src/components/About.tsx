@@ -67,10 +67,10 @@ const About: React.FC<AboutProps> = ({ onSetActive }) => {
           <AnimateOnScroll animation="fade-right" delay={200}>
             <div className="order-2 md:order-1">
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                Xin chào, tôi là <span className="text-blue-600 dark:text-blue-400">Huỳnh Trung Hiếu</span>
+                Xin chào! Tôi là <span className="text-blue-600 dark:text-blue-400">Huỳnh Trung Hiếu,</span>
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Xin chào, tôi là Huỳnh Trung Hiếu - sinh viên năm cuối ngành Kỹ thuật Phần mềm tại Đại học Nha Trang, đam mê phát triển web và UX/UI. Thành thạo HTML, CSS, JavaScript, TailwindCSS cùng ReactJS ở Front-end và làm việc với Laravel PHP, MySQL ở Back-end.
+              Tôi là sinh viên năm cuối ngành Kỹ thuật Phần mềm tại Đại học Nha Trang, đam mê phát triển web và UX/UI. Thành thạo HTML, CSS, JavaScript, TailwindCSS cùng ReactJS ở Front-end và làm việc với Laravel PHP, MySQL ở Back-end.
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">

@@ -54,7 +54,7 @@ const Hero: React.FC<HeroProps> = ({ onSetActive }) => {
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
-          Xin chào! Tôi là một nhà phát triển web toàn diện chuyên xây dựng trải nghiệm web ấn tượng với React và các công nghệ hiện đại.
+          Xin chào! Tôi là một nhà phát triển web toàn diện chuyên xây dựng trải nghiệm web ấn tượng.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center mb-12">
