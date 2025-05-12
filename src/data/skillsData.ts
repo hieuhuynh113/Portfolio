@@ -6,7 +6,7 @@ interface Skill {
 export const frontendSkills: Skill[] = [
   { name: 'HTML/CSS', level: 95 },
   { name: 'JavaScript', level: 92 },
-  { name: 'TypeScript', level: 88 },
+  { name: 'TypeScript', level: 50 },
   { name: 'React', level: 70 },
   { name: 'Tailwind CSS', level: 90 },
   { name: 'SASS/SCSS', level: 70 },
@@ -14,10 +14,10 @@ export const frontendSkills: Skill[] = [
 ];
 
 export const backendSkills: Skill[] = [
-  { name: 'Laravel', level: 60 },
+  { name: 'Laravel', level: 50 },
   { name: 'PHP', level: 60 },
   { name: 'MySQL', level: 60 },
-  { name: 'C#', level: 60 },
+  { name: 'C#', level: 50 },
 ];
 
 export const toolsSkills: Skill[] = [
