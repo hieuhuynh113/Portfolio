@@ -1,6 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import { Send, MapPin, Phone, Mail, Loader2 } from 'lucide-react';
 import AnimateOnScroll from './AnimateOnScroll';
+import emailjs from '@emailjs/browser';
+
+// Thay thế các giá trị này bằng thông tin từ tài khoản EmailJS của bạn
+const EMAILJS_SERVICE_ID = 'service_3oyzqop';
+const EMAILJS_TEMPLATE_ID = 'template_cfy4fmk';
+const EMAILJS_PUBLIC_KEY = 'QWmLJ0QX_lmjHrhtq';
 
 interface ContactProps {
   onSetActive: () => void;
@@ -8,6 +14,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -18,6 +25,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
     message: string;
     type: 'success' | 'error' | '';
   }>({ message: '', type: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,29 +55,53 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Normally this would be connected to a backend API
-    console.log('Form submitted:', formState);
-    
-    // Just for demonstration
-    setFormStatus({
-      message: 'Tin nhắn đã được gửi thành công. Cảm ơn bạn!',
-      type: 'success',
-    });
-    
-    // Reset form
-    setFormState({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-    
-    // Clear status after a few seconds
-    setTimeout(() => {
-      setFormStatus({ message: '', type: '' });
-    }, 5000);
+
+    if (!formRef.current) return;
+
+    try {
+      setIsSubmitting(true);
+
+      // Gửi email sử dụng EmailJS
+      const result = await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result.text);
+
+      // Hiển thị thông báo thành công
+      setFormStatus({
+        message: 'Tin nhắn đã được gửi thành công. Cảm ơn bạn!',
+        type: 'success',
+      });
+
+      // Reset form
+      setFormState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+
+      // Hiển thị thông báo lỗi
+      setFormStatus({
+        message: 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.',
+        type: 'error',
+      });
+    } finally {
+      setIsSubmitting(false);
+
+      // Xóa thông báo sau 5 giây
+      setTimeout(() => {
+        setFormStatus({ message: '', type: '' });
+      }, 5000);
+    }
   };
 
   const contactInfo = [
@@ -127,7 +159,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-left" delay={200} className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
               {formStatus.message && (
                 <div
                   className={`mb-6 p-4 rounded-md ${
@@ -155,7 +187,8 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                     value={formState.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 disabled:opacity-70"
                   />
                 </div>
 
@@ -173,7 +206,8 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                     value={formState.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 disabled:opacity-70"
                   />
                 </div>
               </div>
@@ -192,7 +226,8 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                   value={formState.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 disabled:opacity-70"
                 />
               </div>
 
@@ -209,17 +244,28 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                   value={formState.message}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 disabled:opacity-70"
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all shadow-md hover:shadow-lg"
+                disabled={isSubmitting}
+                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="h-5 w-5 mr-2" />
-                Gửi tin nhắn
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                    Đang gửi...
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-5 w-5 mr-2" />
+                    Gửi tin nhắn
+                  </>
+                )}
               </button>
             </form>
           </AnimateOnScroll>

@@ -22,7 +22,6 @@ export const backendSkills: Skill[] = [
 
 export const toolsSkills: Skill[] = [
   { name: 'Git/GitHub', level: 90 },
-  { name: 'Docker', level: 75 },
   { name: 'Vite', level: 85 },
   { name: 'Figma', level: 85 },
   { name: 'VS Code', level: 95 },
