@@ -3,7 +3,7 @@ import { Send, MapPin, Phone, Mail, Loader2 } from 'lucide-react';
 import AnimateOnScroll from './AnimateOnScroll';
 import emailjs from '@emailjs/browser';
 
-// Thay thế các giá trị này bằng thông tin từ tài khoản EmailJS của bạn
+// Replace these values with your EmailJS account information
 const EMAILJS_SERVICE_ID = 'service_3oyzqop';
 const EMAILJS_TEMPLATE_ID = 'template_cfy4fmk';
 const EMAILJS_PUBLIC_KEY = 'QWmLJ0QX_lmjHrhtq';
@@ -63,7 +63,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
     try {
       setIsSubmitting(true);
 
-      // Gửi email sử dụng EmailJS
+      // Send email using EmailJS
       const result = await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -73,9 +73,9 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
 
       console.log('Email sent successfully:', result.text);
 
-      // Hiển thị thông báo thành công
+      // Show success message
       setFormStatus({
-        message: 'Tin nhắn đã được gửi thành công. Cảm ơn bạn!',
+        message: 'Message sent successfully. Thank you!',
         type: 'success',
       });
 
@@ -89,15 +89,15 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
     } catch (error) {
       console.error('Failed to send email:', error);
 
-      // Hiển thị thông báo lỗi
+      // Show error message
       setFormStatus({
-        message: 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.',
+        message: 'An error occurred while sending the message. Please try again later.',
         type: 'error',
       });
     } finally {
       setIsSubmitting(false);
 
-      // Xóa thông báo sau 5 giây
+      // Clear message after 5 seconds
       setTimeout(() => {
         setFormStatus({ message: '', type: '' });
       }, 5000);
@@ -107,12 +107,12 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
   const contactInfo = [
     {
       icon: <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
-      title: 'Địa chỉ',
-      details: 'Đường quốc lộ 1A, Diên Toàn, Diên Khánh, Khánh Hòa',
+      title: 'Address',
+      details: 'National Highway 1A, Dien Toan, Dien Khanh, Khanh Hoa',
     },
     {
       icon: <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
-      title: 'Điện thoại',
+      title: 'Phone',
       details: '+84 559764554',
     },
     {
@@ -130,10 +130,10 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Liên hệ</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact</h2>
             <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
             <p className="mt-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-              Hãy liên hệ với tôi nếu bạn có bất kỳ câu hỏi hoặc cơ hội hợp tác nào. Tôi sẽ phản hồi trong thời gian sớm nhất.
+              Feel free to contact me if you have any questions or collaboration opportunities. I'll respond as soon as possible.
             </p>
           </div>
         </AnimateOnScroll>
@@ -178,7 +178,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                   >
-                    Họ tên
+                    Full Name
                   </label>
                   <input
                     type="text"
@@ -217,7 +217,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                   htmlFor="subject"
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                 >
-                  Tiêu đề
+                  Subject
                 </label>
                 <input
                   type="text"
@@ -236,7 +236,7 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                 >
-                  Nội dung
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -258,12 +258,12 @@ const Contact: React.FC<ContactProps> = ({ onSetActive }) => {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-                    Đang gửi...
+                    Sending...
                   </>
                 ) : (
                   <>
                     <Send className="h-5 w-5 mr-2" />
-                    Gửi tin nhắn
+                    Send Message
                   </>
                 )}
               </button>

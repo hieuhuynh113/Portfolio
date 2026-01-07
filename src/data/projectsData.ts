@@ -11,17 +11,17 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "PORTFOLIO",
-    shortDescription: "Portfolio cá nhân của tôi!",
+    shortDescription: "My personal portfolio!",
     
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design", "Dark Mode"],
     category: "Web",
     image: "portfolio_avatar_project.jpg",
     githubUrl: "https://github.com/hieuhuynh113/Portfolio",
-    liveUrl: "https://portfolio-seven-psi-33.vercel.app/"
+    liveUrl: "https://portfolio-hieu-huynh.vercel.app/"
   },
   {
-    title: "WEBSITE BARBER SHOP",
-    shortDescription: "Đặt lịch cắt tóc online và quản lý lịch cắt tóc!",
+    title: "BARBER SHOP WEBSITE",
+    shortDescription: "Online barber shop booking and appointment management system!",
     technologies: ["Laravel", "PHP", "MySQL", "XAMPP"],
     category: "Web",
     image: "project_2.png",
@@ -29,8 +29,8 @@ export const projects: Project[] = [
     liveUrl: "https://ntu271.vpsttt.vn/"
   },
   {
-    title: "WEBSITE TRUNG TÂM TIẾNG NHẬT",
-    shortDescription: "Nền tảng trực tuyến toàn diện cho việc học tiếng Nhật, tư vấn du học và khám phá văn hóa Nhật Bản!",
+    title: "JAPANESE LANGUAGE CENTER WEBSITE",
+    shortDescription: "Comprehensive online platform for learning Japanese, study abroad consultation, and exploring Japanese culture!",
     technologies: ["React", "TypeScript", "JavaScript", "Material UI"],
     category: "Web",
     image: "project_3.png",
@@ -38,8 +38,8 @@ export const projects: Project[] = [
     liveUrl: "https://japanese.ntu271.vpsttt.vn/"
   },
   {
-    title: "LANDING PAGE NHÀ HÀNG",
-    shortDescription: "Website nhà hàng sang trọng, trưng bày thực đơn cao cấp, không gian đẳng cấp!",
+    title: "RESTAURANT LANDING PAGE",
+    shortDescription: "Luxurious restaurant website showcasing premium menu and elegant space!",
     technologies: ["React", "TypeScript", "Tailwind CSS ", "Vite"],
     category: "Web",
     image: "project_4.png",

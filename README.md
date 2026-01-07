@@ -1,28 +1,28 @@
-# Portfolio - Huỳnh Trung Hiếu
+# Portfolio - Huynh Trung Hieu
 
 <div align="center">
   <img src="./public/avatar.png" alt="Portfolio Preview" width="600">
-  <p><em>Website portfolio cá nhân với thiết kế hiện đại và tương thích đa thiết bị</em></p>
+  <p><em>Personal portfolio website with modern design and multi-device compatibility</em></p>
 </div>
 
-## 📋 Tổng Quan
+## 📋 Overview
 
-Website portfolio này giới thiệu các kỹ năng, dự án và kinh nghiệm chuyên môn của tôi với tư cách là một nhà phát triển web. Được xây dựng bằng React, TypeScript và Tailwind CSS, website có giao diện hiện đại với các hiệu ứng chuyển động mượt mà, hỗ trợ chế độ tối/sáng và thiết kế hoàn toàn tương thích với mọi thiết bị.
+This portfolio website showcases my skills, projects, and professional experience as a web developer. Built with React, TypeScript, and Tailwind CSS, the website features a modern interface with smooth animations, dark/light mode support, and fully responsive design for all devices.
 
-🌐 **Demo Trực Tiếp**: [portfolio.ntu271.vpsttt.vn](https://portfolio.ntu271.vpsttt.vn/)
+🌐 **Live Demo**: [portfolio-hieu-huynh.vercel.app](https://portfolio-hieu-huynh.vercel.app/)
 
-## ✨ Tính Năng
+## ✨ Features
 
-- **Thiết Kế Tương Thích** - Tối ưu hóa cho mọi kích thước thiết bị từ di động đến máy tính
-- **Chế Độ Tối/Sáng** - Tự động thích ứng với tùy chọn của người dùng với tùy chọn chuyển đổi thủ công
-- **Giao Diện Có Hiệu Ứng** - Hiệu ứng cuộn và chuyển đổi mượt mà tạo trải nghiệm hấp dẫn
-- **Trưng Bày Dự Án** - Thẻ dự án tương tác với chế độ xem chi tiết dạng modal
-- **Biểu Mẫu Liên Hệ** - Chức năng liên hệ trực tiếp với xác thực biểu mẫu
-- **Tối Ưu SEO** - Thẻ meta và HTML ngữ nghĩa để cải thiện khả năng hiển thị trên công cụ tìm kiếm
-- **Khả Năng Tiếp Cận** - Được xây dựng với các thực hành tốt nhất về khả năng tiếp cận
-- **Tối Ưu Hiệu Suất** - Thời gian tải nhanh với tài nguyên được tối ưu hóa
+- **Responsive Design** - Optimized for all device sizes from mobile to desktop
+- **Dark/Light Mode** - Automatically adapts to user preferences with manual toggle option
+- **Animated Interface** - Smooth scroll and transition effects creating an engaging experience
+- **Project Showcase** - Interactive project cards with detailed modal view
+- **Contact Form** - Direct contact functionality with form validation
+- **SEO Optimized** - Meta tags and semantic HTML to improve search engine visibility
+- **Accessibility** - Built with best practices for accessibility
+- **Performance Optimized** - Fast loading times with optimized resources
 
-## 🛠️ Công Nghệ Sử Dụng
+## 🛠️ Technologies Used
 
 <div>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
@@ -32,79 +32,79 @@ Website portfolio này giới thiệu các kỹ năng, dự án và kinh nghiệ
 </div>
 
 - **Frontend**: React, TypeScript, Tailwind CSS
-- **Công Cụ Build**: Vite
-- **Hiệu Ứng**: CSS Transitions, Intersection Observer API
-- **Biểu Tượng**: Lucide React
-- **Triển Khai**: VPS Hosting Tùy Chỉnh
+- **Build Tool**: Vite
+- **Animations**: CSS Transitions, Intersection Observer API
+- **Icons**: Lucide React
+- **Deployment**: Custom VPS Hosting
 
-## 🚀 Cài Đặt và Chạy Dự Án
+## 🚀 Installation and Running the Project
 
-### Yêu Cầu
+### Requirements
 
-- Node.js (v14.0.0 trở lên)
-- npm hoặc yarn
+- Node.js (v14.0.0 or higher)
+- npm or yarn
 
-### Các Bước Cài Đặt
+### Installation Steps
 
-1. Clone repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/hieuhuynh113/Portfolio.git
    cd Portfolio
    ```
 
-2. Cài đặt các phụ thuộc:
+2. Install dependencies:
    ```bash
    npm install
-   # hoặc
+   # or
    yarn
    ```
 
-3. Khởi động server phát triển:
+3. Start the development server:
    ```bash
    npm run dev
-   # hoặc
+   # or
    yarn dev
    ```
 
-4. Build cho môi trường production:
+4. Build for production:
    ```bash
    npm run build
-   # hoặc
+   # or
    yarn build
    ```
 
-## 📁 Cấu Trúc Dự Án
+## 📁 Project Structure
 
 ```
 Portfolio/
-├── public/           # Tài nguyên tĩnh
+├── public/           # Static resources
 ├── src/
-│   ├── assets/       # Hình ảnh và tài nguyên khác
-│   ├── components/   # Các component React
+│   ├── assets/       # Images and other resources
+│   ├── components/   # React components
 │   ├── contexts/     # Context providers
-│   ├── data/         # Dữ liệu dự án và kỹ năng
+│   ├── data/         # Project and skills data
 │   ├── hooks/        # Custom React hooks
-│   ├── App.tsx       # Component App chính
-│   └── main.tsx      # Điểm khởi đầu
-├── index.html        # Template HTML
-├── vite.config.ts    # Cấu hình Vite
-├── tsconfig.json     # Cấu hình TypeScript
-└── package.json      # Phụ thuộc dự án
+│   ├── App.tsx       # Main App component
+│   └── main.tsx      # Entry point
+├── index.html        # HTML template
+├── vite.config.ts    # Vite configuration
+├── tsconfig.json     # TypeScript configuration
+└── package.json      # Project dependencies
 ```
 
-## ✅ Tính Năng Sẽ Phát Triển
+## ✅ Upcoming Features
 
-- [ ] Phần blog với hỗ trợ MDX
-- [ ] Hỗ trợ đa ngôn ngữ
-- [ ] Demo dự án tương tác hơn
-- [ ] Hiệu ứng hoạt ảnh nâng cao
-- [ ] Phần đánh giá từ người dùng
+- [ ] Blog section with MDX support
+- [ ] Multi-language support
+- [ ] More interactive project demos
+- [ ] Advanced animation effects
+- [ ] User testimonials section
 
-## 📄 Giấy Phép
+## 📄 License
 
-Dự án này được cấp phép theo Giấy phép MIT - xem tệp [LICENSE](LICENSE) để biết chi tiết.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📧 Liên Hệ
+## 📧 Contact
 
 - Email: [trunghieuhuynh520@gmail.com](mailto:trunghieuhuynh520@gmail.com)
 - GitHub: [@hieuhuynh113](https://github.com/hieuhuynh113)
@@ -112,6 +112,6 @@ Dự án này được cấp phép theo Giấy phép MIT - xem tệp [LICENSE](L
 ---
 
 <div align="center">
-  <p>⭐ Nếu bạn thấy dự án này hữu ích, hãy xem xét tặng nó một sao! ⭐</p>
-  <p>Thiết kế & Phát triển với ❤️ bởi Huỳnh Trung Hiếu</p>
+  <p>⭐ If you find this project useful, please consider giving it a star! ⭐</p>
+  <p>Designed & Developed by Huynh Trung Hieu</p>
 </div> 

@@ -37,18 +37,18 @@ const About: React.FC<AboutProps> = ({ onSetActive }) => {
   const cards = [
     {
       icon: <Code2 className="h-8 w-8 text-blue-600 dark:text-blue-400" />,
-      title: 'Phát triển web',
-      description: 'Chuyên về xây dựng ứng dụng web hiện đại với React, JavaScript và các công nghệ mới nhất.',
+      title: 'Web Development',
+      description: 'Specialized in building modern web applications with React, JavaScript and the latest technologies.',
     },
     {
       icon: <BookOpen className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />,
-      title: 'Học tập liên tục',
-      description: 'Luôn cập nhật với các xu hướng và công nghệ mới trong lĩnh vực phát triển web.',
+      title: 'Continuous Learning',
+      description: 'Always staying updated with new trends and technologies in web development.',
     },
     {
       icon: <Coffee className="h-8 w-8 text-amber-600 dark:text-amber-400" />,
-      title: 'Đam mê',
-      description: 'Yêu thích việc giải quyết các thách thức phức tạp và tạo ra trải nghiệm người dùng tuyệt vời.',
+      title: 'Passion',
+      description: 'Love solving complex challenges and creating great user experiences.',
     },
   ];
 
@@ -60,7 +60,7 @@ const About: React.FC<AboutProps> = ({ onSetActive }) => {
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Giới thiệu về tôi</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
           </div>
         </AnimateOnScroll>
@@ -69,18 +69,18 @@ const About: React.FC<AboutProps> = ({ onSetActive }) => {
           <AnimateOnScroll animation="fade-right" delay={200}>
             <div className="order-2 md:order-1">
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                Xin chào! Tôi là <span className="text-blue-600 dark:text-blue-400">Huỳnh Trung Hiếu,</span>
+                Hello! I'm <span className="text-blue-600 dark:text-blue-400">Huynh Trung Hieu,</span>
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Tôi là sinh viên năm cuối ngành Kỹ thuật Phần mềm tại Đại học Nha Trang, đam mê phát triển web và UX/UI. Thành thạo HTML, CSS, JavaScript, TailwindCSS cùng ReactJS ở Front-end và làm việc với Laravel PHP, MySQL ở Back-end.
+              I'm a final-year Software Engineering student at Nha Trang University, passionate about web development and UX/UI. Proficient in HTML, CSS, JavaScript, TailwindCSS, and ReactJS on the Front-end, and working with Laravel PHP and MySQL on the Back-end.
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Qua các dự án thực tế như website bán quần áo và website đặt lịch cắt tóc tôi luôn hướng đến việc tạo ra sản phẩm có giao diện trực quan, thân thiện với người dùng và hiệu suất ổn định. Với sự tò mò không ngừng tôi luôn hướng đến việc mở rộng kiến thức và kỹ năng của mình, đặc biệt trong lĩnh vực an ninh mạng, như đã được chứng nhận qua khóa học Cyber Security cơ bản.
+              Through practical projects such as a clothing e-commerce website and a barber shop booking website, I always aim to create products with intuitive interfaces, user-friendly experiences, and stable performance. With endless curiosity, I constantly seek to expand my knowledge and skills, especially in cybersecurity, as certified through a basic Cyber Security course.
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Với tinh thần học hỏi không ngừng và niềm đam mê giải quyết vấn đề, tôi mong muốn được đóng góp những giải pháp sáng tạo và hiệu quả cho các dự án công nghệ, đồng thời phát triển bản thân trở thành một lập trình viên chuyên nghiệp trong tương lai.
+              With a continuous learning mindset and a passion for problem-solving, I aspire to contribute creative and effective solutions to technology projects while developing myself into a professional programmer in the future.
               </p>
               
 
@@ -89,7 +89,7 @@ const About: React.FC<AboutProps> = ({ onSetActive }) => {
                   href="#contact"
                   className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
                 >
-                  Liên hệ ngay
+                  Contact Now
                 </a>
               </div>
             </div>

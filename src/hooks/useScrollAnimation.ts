@@ -20,7 +20,7 @@ export function useScrollAnimation<T extends HTMLElement>(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Ngừng theo dõi sau khi đã hiển thị
+          // Stop observing after the element becomes visible
           observer.unobserve(element);
         }
       },

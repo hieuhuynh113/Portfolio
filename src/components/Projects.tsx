@@ -43,15 +43,15 @@ const Projects: React.FC<ProjectsProps> = ({ onSetActive }) => {
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Dự án</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
             <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
             <p className="mt-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-              Dưới đây là một số dự án tiêu biểu mà tôi đã thực hiện. Mỗi dự án thể hiện kỹ năng và kiến thức của tôi trong các công nghệ khác nhau.
+              Below are some of my featured projects. Each project demonstrates my skills and knowledge in different technologies.
             </p>
           </div>
         </AnimateOnScroll>
 
-        {/* Hiển thị dự án dạng lưới 2x2 với overlay */}
+        {/* Display projects in a 2x2 grid with overlay */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <AnimateOnScroll key={index} delay={index * 100} className="h-full">
@@ -61,14 +61,14 @@ const Projects: React.FC<ProjectsProps> = ({ onSetActive }) => {
                 rel="noopener noreferrer"
                 className="block relative overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 group h-[320px] hover:shadow-xl transition-all duration-500 hover:scale-[0.94] hover:border-blue-500/50"
               >
-                {/* Hình ảnh nền với độ mờ cao hơn */}
+                {/* Background image with higher opacity */}
                 <img
                   src={project.image}
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70"
                 />
                 
-                {/* Overlay và thông tin - căn giữa */}
+                {/* Overlay and information - centered */}
                 <div 
                   className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-500
                   bg-gradient-to-t from-black/90 via-black/70 to-black/40
@@ -122,7 +122,7 @@ const Projects: React.FC<ProjectsProps> = ({ onSetActive }) => {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <Github className="h-3.5 w-3.5 mr-1.5" />
-                        Xem mã nguồn
+                        View Source Code
                       </a>
                     </div>
                   )}

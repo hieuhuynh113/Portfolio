@@ -16,8 +16,9 @@ export const frontendSkills: Skill[] = [
 export const backendSkills: Skill[] = [
   { name: 'Laravel', level: 50 },
   { name: 'PHP', level: 60 },
-  { name: 'MySQL', level: 60 },
+  { name: 'MySQL', level: 70 },
   { name: 'C#', level: 50 },
+  { name: 'NodeJS', level: 70 },
 ];
 
 export const toolsSkills: Skill[] = [

@@ -35,11 +35,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   };
 
   const navLinks = [
-    { name: 'Trang chủ', id: 'hero' },
-    { name: 'Giới thiệu', id: 'about' },
-    { name: 'Dự án', id: 'projects' },
-    { name: 'Kỹ năng', id: 'skills' },
-    { name: 'Liên hệ', id: 'contact' },
+    { name: 'Home', id: 'hero' },
+    { name: 'About', id: 'about' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Contact', id: 'contact' },
   ];
 
   return (
@@ -50,17 +50,17 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <a href="#hero" className="flex items-center space-x-2">
-              <Code className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-              <span className="text-xl font-bold">Huỳnh Trung Hiếu</span>
+              <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <span className="text-xl font-bold">Huynh Trung Hieu</span>
             </a>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="items-center hidden space-x-8 md:flex">
             <div className="flex items-center space-x-6">
               {navLinks.map((link) => (
                 <a
@@ -78,28 +78,28 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             </div>
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none"
+              className="p-2 text-gray-800 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-gray-200 focus:outline-none"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="w-5 h-5" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="w-5 h-5" />
               )}
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center space-x-4">
+          <div className="flex items-center space-x-4 md:hidden">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none"
+              className="p-2 text-gray-800 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-gray-200 focus:outline-none"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="w-5 h-5" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="w-5 h-5" />
               )}
             </button>
             <button
@@ -108,9 +108,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               aria-label="Toggle Menu"
             >
               {isOpen ? (
-                <X className="h-6 w-6" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -119,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-xl">
+        <div className="bg-white shadow-xl md:hidden dark:bg-gray-900">
           <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a

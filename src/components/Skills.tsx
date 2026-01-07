@@ -56,10 +56,10 @@ const Skills: React.FC<SkillsProps> = ({ onSetActive }) => {
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kỹ năng</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills</h2>
             <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
             <p className="mt-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-              Dưới đây là các kỹ năng và công nghệ mà tôi thành thạo. Tôi luôn học hỏi và cập nhật các công nghệ mới để nâng cao kỹ năng của mình.
+              Below are the skills and technologies I'm proficient in. I'm always learning and updating with new technologies to enhance my skills.
             </p>
           </div>
         </AnimateOnScroll>
@@ -94,7 +94,7 @@ const Skills: React.FC<SkillsProps> = ({ onSetActive }) => {
           <AnimateOnScroll delay={500} animation="fade-up">
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <h3 className="text-xl font-bold mb-6 text-center border-b border-gray-200 dark:border-gray-700 pb-3">
-                Công cụ & Khác
+                Tools & Others
               </h3>
               <div className="space-y-6">
                 {toolsSkills.map((skill, index) => (
