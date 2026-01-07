@@ -44,6 +44,6 @@ export const projects: Project[] = [
     category: "Web",
     image: "project_4.png",
     githubUrl: "https://github.com/hieuhuynh113/landing-page-restaurant",
-    liveUrl: "https://landingpage.ntu271.vpsttt.vn/"
+    liveUrl: "https://landing-page-restaurant-lake.vercel.app/"
   }
 ];
